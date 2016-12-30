@@ -1,4 +1,4 @@
-import * as PIXI from 'pixi.js'
+/// <reference path="./typings/globals/pixi.js/index.d.ts" />
 
 class Startup {
     public static main(): number {
@@ -9,45 +9,29 @@ class Startup {
 
 Startup.main();
 
-// You can use either `new PIXI.WebGLRenderer`, `new PIXI.CanvasRenderer`, or `PIXI.autoDetectRenderer`
-// which will try to choose the best renderer for the environment you are in.
-var renderer = new PIXI.WebGLRenderer(800, 600);
+var renderer = new PIXI.CanvasRenderer(640, 480);
 
-// The renderer will create a canvas element for you that you can then insert into the DOM.
 document.body.appendChild(renderer.view);
 
-// You need to create a root container that will hold the scene you want to draw.
 var stage = new PIXI.Container();
 
-// Declare a global variable for our sprite so that the animate function can access it.
-var bunny = null;
+var smile: PIXI.Sprite = null;
 
-// load the texture we need
-PIXI.loader.add('bunny', 'bunny.png').load(function (loader, resources) {
-    // This creates a texture from a 'bunny.png' image.
-    bunny = new PIXI.Sprite(resources.bunny.texture);
+PIXI.loader.add('smile', 'smile.png').load(function (loader, resources) {
 
-    // Setup the position and scale of the bunny
-    bunny.position.x = 400;
-    bunny.position.y = 300;
+    smile = new PIXI.Sprite(resources.smile.texture);
 
-    bunny.scale.x = 2;
-    bunny.scale.y = 2;
+    smile.position.x = 640 / 2;
+    smile.position.y = 480 / 2;
+    smile.anchor.set(0.5,0.5);
 
-    // Add the bunny to the scene we are building.
-    stage.addChild(bunny);
+    stage.addChild(smile);
 
-    // kick off the animation loop (defined below)
     animate();
 });
 
 function animate() {
-    // start the timer for the next animation loop
+
     requestAnimationFrame(animate);
-
-    // each frame we spin the bunny around a bit
-    bunny.rotation += 0.01;
-
-    // this is the main render call that makes pixi draw your container and its children.
     renderer.render(stage);
 }

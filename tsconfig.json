@@ -3,5 +3,9 @@
         "target": "es5",
         "module": "commonjs",
         "sourceMap": true
-    }
+    },
+    "files": [
+        "./HelloWorld.ts",
+        "./typings/index.d.ts"
+    ]
 }

@@ -1,0 +1,5 @@
+{
+  "globalDevDependencies": {
+    "pixi.js": "registry:dt/pixi.js#4.3.0+20161230173829"
+  }
+}
