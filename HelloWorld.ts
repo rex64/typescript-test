@@ -12,13 +12,13 @@ Startup.main();
 const width: number = 800;
 const height: number = 800;
 
-var renderer = new PIXI.CanvasRenderer(width, height);
+let renderer = new PIXI.CanvasRenderer(width, height);
 
 document.body.appendChild(renderer.view);
 
-var stage = new PIXI.Container();
+let stage = new PIXI.Container();
 
-var smile: PIXI.Sprite = PIXI.Sprite.fromImage('smile.png');
+let smile: PIXI.Sprite = PIXI.Sprite.fromImage('smile.png');
 
 smile.position.x = width / 2;
 smile.position.y = height / 2;
