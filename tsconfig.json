@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "module": "commonjs",
+        "module": "none",
         "sourceMap": true
     },
     "files": [
         "./HelloWorld.ts",
         "./typings/index.d.ts"
+        // "./node_modules/Rx.d.ts"
     ]
 }

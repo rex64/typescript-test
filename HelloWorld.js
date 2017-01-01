@@ -1,4 +1,6 @@
-/// <reference path="./typings/globals/pixi.js/index.d.ts" />
+//// <reference path="node_modules/rxjs/Rx.d.ts" />
+//Rx.Observable.of(`Hello Worlx`).subscribe(result => console.log(result));
+//Rx.Observable.of(1,2,3).subscribe(result => console.log(result));
 var Startup = (function () {
     function Startup() {
     }

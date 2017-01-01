@@ -4,7 +4,8 @@
   "description": "",
   "main": "HelloWorld.js",
   "dependencies": {
-    "pixi.js": "^4.3.0"
+    "pixi.js": "^4.3.0",
+    "rxjs": "^5.0.2"
   },
   "devDependencies": {},
   "scripts": {

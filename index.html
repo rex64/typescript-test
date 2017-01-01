@@ -4,8 +4,25 @@
 <head>
 </head>
 <body>
-  <script src="node_modules/pixi.js/dist/pixi.js"></script>
-  <script src="HelloWorld.js"></script>
+  <!--<script src="node_modules/pixi.js/dist/pixi.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.min.js"></script>-->
+  <script data-main="HelloWorld" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js"></script>
+
+  <script> requirejs.config({
+    //By default load any module IDs from js/lib
+    baseUrl: 'node_modules/',
+    //except, if the module ID starts with "app",
+    //load it from the js/app directory. paths
+    //config is relative to the baseUrl, and
+    //never includes a ".js" extension since
+    //the paths config could be for a directory.
+    // paths: {
+    //     app: '../app'
+    // }
+});
+</script>  
+
+  <!--<script src="HelloWorld.js"></script>-->
   <!--<script id="__bs_script__">//<![CDATA[
     document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.5'><\/script>".replace("HOST", location.hostname));
 //]]></script>-->
